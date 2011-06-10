@@ -8,23 +8,34 @@ len_term = 100
 def fab(n):
     a = 1
     b = 1
-    prev_a = a
-    while b*len_term<n:
-        prev_a = a
+    list_f = []
+    list_f.append(1)
+    list_f.append(1)
+    
+    while b*len_term<n:    
         tmp = a
         a = b
         b += tmp
+        list_f.append(b)
         
-    return (prev_a,a)
+    return list_f
 
-def red(n):
-    term = 0
+def red(n):        
+    list = fab(n)
+    current = len(list)-2
+    #print list
     
-    while n>len_term:
-        term += 1
-        n -= (fab(n)[0]*len_term)
+    while (n>len_term):
+     #   print n, list[current]
+        while (n-list[current-1]*100) <= 0 :
+            current -= 2            
+            
+        n -= (list[current-1]*100)    
         
-    if (term%2 == 0):
+        current -= 1
+    
+    
+    if ((current+1)%2 == 0):
         return A[n-1]
     else:
         return B[n-1]
@@ -40,4 +51,5 @@ def solve():
     
 if __name__=="__main__":
     solve()
+    
     
