@@ -3,7 +3,6 @@
 # What is the largest 1 to 9 pandigital 9-digit number that can be formed 
 # as the concatenated product of an integer with (1,2, ... , n) where n  1?
 
-import itertools
 
 def is_pandigi(n):
 	list_d = []
