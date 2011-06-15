@@ -44,7 +44,7 @@ http://code.google.com/p/project-euler-pb/
 41. 7652413
 42. 162
 43.
-44.
+44. 5482660
 45.
 46.
 47.
