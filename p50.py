@@ -16,10 +16,11 @@ def is_prime(n):
 	return 1
 
 def build():
-	for i in range(2, limit):
+	# longest sequence wiht sum <100000 has length 183.
+	# so it's safe to build only until limit/200 primes, if we search for a longer sequence
+	for i in range(2, limit/200):
 		if is_prime(i):
 			primes.append(i)
-
 	
 def solve():
 	build()
