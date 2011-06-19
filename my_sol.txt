@@ -53,7 +53,7 @@ http://code.google.com/p/project-euler-pb/
 50. 997651
 51.
 52. 142857
-53.
+53. 4075
 54.
 55.
 56.
