@@ -56,7 +56,7 @@ http://code.google.com/p/project-euler-pb/
 53. 4075
 54.
 55.
-56.
+56. 972
 57.
 58.
 59.
