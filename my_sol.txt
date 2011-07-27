@@ -71,7 +71,7 @@ http://code.google.com/p/project-euler-pb/
 68.
 69. 510510
 70.
-71.
+71. 428570
 72.
 73.
 74.
