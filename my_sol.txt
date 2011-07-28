@@ -73,7 +73,7 @@ http://code.google.com/p/project-euler-pb/
 70.
 71. 428570
 72.
-73.
+73. 7295372
 74.
 75.
 76. 190569291
