@@ -7,57 +7,44 @@
 import time
 import math
 
-def find_factor(n) :
-    for i in xrange(2, int(n**0.5 + 1)) :
-        if n % i == 0 :
-            return i
-    return n
- 
-def find_factors(n) :
-    factors = []
-    while n != 1 :
-        fac = find_factor(n)
-        if fac not in factors :
-            factors.append(fac)
-        n /= fac
-    return factors
- 
+primes = []
+factors = []
+
+def is_prime(n):
+	for i in range(2, int(math.sqrt(n))+1):
+		if n%i == 0 :
+			return 0
+	return 1
+
+# build primes list
+def build_primes(n):
+	for i in range(2, n+1):
+		if is_prime(i):
+			primes.append(i)
+
+# build factors list for 2<=n<=N
+def gen_factors(n):
+	for i in range(0,n+1):
+		factors.append([])
+
+	for p in primes:
+		k = 1
+		while k*p <=n:
+			factors[k*p].append(p)
+			k += 1
+
+# Euler totient function
 def phi(n) :
-    for factor in find_factors(n) :
+    for factor in factors[n] :
         n = n * (factor - 1) / factor
  
     return n
 
-# generator ... 
-def relatively_prime_generator(n, a=1, b=1):
-	### generates all relatively prime pairs <= n.  The larger number comes first.
-	yield (a,b)
-	k = 1
-	while a*k+b <= n:
-		for i in relatively_prime_generator(n, a*k+b, a):
-			yield i
-		k += 1
-
-# find pairs ...
-def find_pairs(lim):
-	cnt = 0	
-	a,b = 1,1
-	
-	stack=[(a,b)]
-	while len(stack)>0:
-		(a1,b1) = stack.pop()
-		cnt += 1
-
-		k = 1
-		while a1*k+b1<=lim:
-			print (a1*k+b1, a1)
-			stack.append((a1*k+b1, a1))
-			k += 1
-
-	print "total: ", cnt-1
-
 def solve():
 	N = 1000000
+
+	build_primes(N)
+	gen_factors(N)
 
 	print sum(map(phi, range(2,N+1)))
 
