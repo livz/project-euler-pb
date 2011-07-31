@@ -112,7 +112,7 @@ http://code.google.com/p/project-euler-pb/
 109.
 110.
 111.
-112.
+112. 1587000
 113.
 114.
 115.
