@@ -102,7 +102,7 @@ http://code.google.com/p/project-euler-pb/
 99. 709
 100.
 101.
-102.
+102. 228
 103.
 104.
 105.
