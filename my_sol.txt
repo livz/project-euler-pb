@@ -85,7 +85,7 @@ http://code.google.com/p/project-euler-pb/
 82.
 83.
 84.
-85.
+85. 2772
 86.
 87.
 88.
