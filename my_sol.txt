@@ -87,7 +87,7 @@ http://code.google.com/p/project-euler-pb/
 84.
 85. 2772
 86.
-87.
+87. 1097343
 88.
 89.
 90.
