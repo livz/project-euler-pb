@@ -1,0 +1,1 @@
+Ongoing work to solve Project Euler problems, using C++, OpenSSL and mostly python.
